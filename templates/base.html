@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %} {% static 'images' as baseUrl %}
+
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo.png' %}" />
+
+
+    <!-- MOBILE SPECIFIC ============================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+
+
+
+
+    <title>{% block title %}{% endblock %} | Oriwu Set 2018/2019</title>
+</head>
+
+<body>
+    <div id="content">
+        {% block content %} {% endblock %}
+
+        <!-- Footer -->
+        <div class="container-fluid mb-1 py-1">
+            <div class="row">
+                <div class="col-12 mx-auto text-center mb-2 pseudo">
+                    <small class=" pseudolink"><a id="admin"> Room Administrators </a> ·  <a id="dev">Developer info</a>
+            </small>
+                </div>
+            </div>
+            <div class="row copyright">
+                <div class="col-12 mx-auto text-center">
+                    <small class="" style="color: whitesmoke;">© Copyright 2020 · New_Era.inc</small>
+                </div>
+            </div>
+        </div>
+        <!-- End of footer-->
+
+        <div class="bg-modal">
+            <div class="modal-content">
+                <div class="close">+</div>
+                <!-- Question popup modal-->
+
+
+                <div class="container-fluid">
+                    <div class="row my-3">
+                        <div class="col-12 mb-0 text-center">
+                            <img class="m-auto" src="{{baseUrl}}/logo.png" height="80" width="80" alt="OSMC logo">
+                        </div>
+                        <div class="col-12 mb-0 mt-2 text-center">
+                            <p class="my-auto">Oriwu Set 2018/2019 Online Vote App</p>
+                            <p>Instruction</p>
+                            <small class="">Instruction: Use the email you filled in the form</small><br>
+                            <small>form link in Group chat</small>
+                        </div>
+                        <div class="col-12 mb-0 mt-2 text-center">
+
+                        </div>
+                    </div>
+                    <div class="row mx-0">
+
+                        <div class="col">
+                            <small>For more Enquiries Contact any of the admin</small>
+                            <table class="table table-striped table-responsive-sm table-hover">
+                                <thead class="table-info">
+                                    <tr>
+                                        <th scope="col">
+                                            Name
+                                        </th>
+
+                                        <th scope="col">
+                                            Phone Number
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <th scope="row">Quadri Faruq</th>
+
+                                        <td> <a href="https://api.whatsapp.com/send?phone=2348186720491" target="_blank">08186720491</a></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Olusola Precious</th>
+
+                                        <td><a href="https://api.whatsapp.com/send?phone=2348122137834" target="_blank">08122137834</a></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Adekoya Sogo</th>
+
+                                        <td><a href="https://api.whatsapp.com/send?phone=2348185575203" target="_blank">08185575203</a></td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-12 mx-auto text-center mb-2 pseudo">
+                            <small class=" text-muted pseudolink"><a id=""> Developed by:</a> <a id=""> Olusola Precious</a>
+            </small><br>
+                            <small class="text-muted">© Copyright 2020 · New_Era.inc</small>
+                        </div>
+
+                        <div class="col-12 mx-auto text-center">
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="scbg-modal">
+            <div class="scmodal-content">
+                <div class="sclose">+</div>
+                <!-- Question popup modal-->
+
+
+                <div class="container-fluid">
+                    <div class="row my-3">
+                        <div class="col-12 mb-0 text-center">
+                            <img class="m-auto" src="{{baseUrl}}/logo.png" height="80" width="80" alt="OSMC logo">
+                        </div>
+                        <div class="col-12 mb-0 mt-2 text-center">
+                            <p class="my-auto">Oriwu Set 2018/2019 Online Vote App</p>
+                            <p>Developer's Information</p>
+                        </div>
+                    </div>
+                    <div class="row mx-0">
+                        <div class="col">
+                            <table class="table table-striped table-responsive-sm table-hover">
+                                <thead class="table-info">
+                                    <tr>
+                                        <th scope="col">
+                                            Developer's Name
+                                        </th>
+
+                                        <th scope="col">
+                                            Olusola Precious
+                                        </th>
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <td>
+                                            Mail
+                                        </td>
+
+                                        <td>
+                                            preciousbusiness10@gmail.com
+                                        </td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td>
+                                            Date Released
+                                        </td>
+
+                                        <td>
+                                            22nd November, 2020.
+                                        </td>
+                                    </tr>
+
+                                </thead>
+                            </table>
+
+                        </div>
+
+                        <div class="col-12 mb-0 mt-2 text-center">
+                            <small class="my-auto">This app is used for free, but cost alot to put up😫😩</small><br>
+                            <small>Please encourage</small>
+                        </div>
+
+                        <div class="col">
+                            <table class="table  table-striped table-responsive-sm table-hover">
+                                <tbody>
+                                    <tr class="table-warning">
+                                        <td>
+                                            Cash
+                                        </td>
+
+                                        <td>
+                                            Account No: 0220009767 (GTB)
+                                        </td>
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td>
+                                            Airtime
+                                        </td>
+
+                                        <td>
+                                            08122137834 (Airtel)
+                                        </td>
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td>
+                                            Airtime
+                                        </td>
+
+                                        <td>
+                                            08114662066 (Glo)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-12 mx-auto text-center mb-2 pseudo">
+                            <small class=" text-muted pseudolink">Thank you😊🤗</small><br>
+                            <small class="text-muted">© Copyright 2020 · New_Era.inc</small>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById('admin').addEventListener('click', function() {
+            document.querySelector('.bg-modal').style.display = 'flex';
+
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.querySelector('.bg-modal').style.display = 'none';
+        });
+
+        document.getElementById('dev').addEventListener('click', function() {
+            document.querySelector('.scbg-modal').style.display = 'flex';
+
+        });
+
+        document.querySelector('.sclose').addEventListener('click', function() {
+            document.querySelector('.scbg-modal').style.display = 'none';
+        });
+    </script>
+    <!--<script>
+        setInterval(function(liveResult) {
+            $('#stat').load('stats');
+
+        }, 3000);
+    </script>-->
+
+</body>
+
+</html>

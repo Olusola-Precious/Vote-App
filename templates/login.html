@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block title%} Login {% endblock %} {% block content %}
+
+
+
+
+<div class="container-fluid">
+
+    <div class="row text-center">
+        <div class="col mt-4">
+            <img class="mt-1 mob-img" src="{{baseUrl}}/logo.png" alt="Oriwu Senior Model College " width="100" height="100">
+            <h4 class="mb-2 font-weight-normal mob-text text-center text-white">ORIWU SET 18/19 ADMIN ELECTION</h4>
+
+            <form class="card-container card col-md-6 form-signin" action="" method="post">
+                {% csrf_token %}
+
+
+                <h1 class="h3 mb-3 font-weight-normal">Enter Email</h1>
+
+                <label for="inputMail" class="sr-only">Email</label>
+
+                <input type="text" id="inputMail" name="Pemail" class="mb-2 form-control" placeholder="Email" required="" autofocus="">
+                <div>
+
+                    {% for message in messages %}
+                    <span class="mb-3 font-weight-normal" style="color: rgb(223, 46, 46);">{{message}}</span> {% endfor %}
+                </div>
+
+
+
+                <button class="btn " type="submit">Continue</button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
+<!-- End for mobile -->
+
+
+
+
+
+{% endblock %}

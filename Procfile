@@ -1,0 +1,1 @@
+web: gunicorn evote.wsgi --log-file -

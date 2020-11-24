@@ -1,0 +1,8 @@
+{% extends 'stats.html' %} {% block live %} {% for nominee in contestants %}
+<tr>
+    <th scope="row">{{forloop.counter}}</th>
+    <td>{{nominee.name}}</td>
+    <td>{{nominee.votes}}</td>
+
+</tr>
+{% endfor %} {% endblock %}

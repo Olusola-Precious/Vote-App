@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% block title%} Statistics {% endblock %} {% block content %}
+
+
+
+
+<div class="container ">
+
+    <div class="row text-center mt-2">
+        <div class="col">
+            <img class="mt-3 mob-img" src="{{baseUrl}}/logo.png" alt="Oriwu Senior Model College " width="100" height="100">
+            <h4 class="mb-3 font-weight-normal mob-text text-center text-white">ORIWU SET 18/19 ADMIN ELECTION(Statistics)</h4>
+            <h5 class="mb-3 font-weight-normal mob-text text-center text-white">Vote | <span>
+                {% if voting == 'None' %} <b style="background-color: rgb(219, 219, 52); color: white; margin: 5px; padding: 5px; border-radius: 5px;">Not Started</b> 
+                {% elif voting == 'true' %} <b style="background-color: rgb(25, 143, 25); color: white; margin: 5px; padding: 5px; border-radius: 5px;">Ongoing</b> 
+                {% else %} <b style="background-color: rgb(190, 57, 57); color: white; margin: 5px; padding: 5px; border-radius: 5px;">Ended</b> 
+                {% endif %}</span></h5>
+            <h6 class="mb-3 font-weight-normal mob-text text-center text-white">Total number of voters | <span>{{total}}</span></h6>
+
+            <div class="row">
+                <div class="logg m-auto col ">
+                    <div class="col">
+
+                        <caption>Statistics </caption>
+                        <table class="table table-hover">
+                            <thead class="table-info">
+                                <tr>
+                                    <th scope="col">
+                                        #
+                                    </th>
+
+                                    <th scope="col">
+                                        Nominee
+                                    </th>
+
+                                    <th scope="col">
+                                        Votes
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="stat">
+                                {% block live %}{% endblock %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- End for mobile -->
+
+
+
+
+</div>
+{% endblock %}

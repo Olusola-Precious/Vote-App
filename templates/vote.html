@@ -1,0 +1,64 @@
+{% extends 'base.html' %} {% block title%} Vote {% endblock %} {% block content %}
+
+
+
+<!--Mobile-->
+<div class="container">
+
+    <div class="row text-center mt-1">
+        <div class="col">
+            <img class="mt-2 mob-img" src="{{baseUrl}}/logo.png" alt="Oriwu Senior Model College " width="100" height="100">
+            <h4 class="mb-1 font-weight-normal mob-text text-center text-white">ORIWU SET 18/19 ADMIN ELECTION</h4>
+            <form class="card-container card col-md-6 form-signin" action="" method="post">
+                {% csrf_token %}
+
+
+                <h1 class="h3 mb-3 font-weight-normal">Vote a Nominee</h1>
+
+
+
+                <div class="box">
+                    {% for nominee in contestants %}
+                    <input type="radio" name="votee" id="option-{{forloop.counter}}" value="{{nominee.id}}">
+
+                    <label for="option-{{forloop.counter}}" class="option-{{forloop.counter}}">
+                        <div class="dot"></div> 
+                        <div class="text">{{nominee.name}}</div>
+                    </label> {% endfor %}
+
+                </div>
+
+                <!--<div class="radio">
+                    
+                    <input id={#{contestant.id}#} type="radio" name="votee" >
+                    <label for={#{contestant.id}#}>{#{contestant.name}#}</label>
+                </div>-->
+
+                <!--<div class="radio radio-checked">
+                        <input type="radio" id="example_radio_2" name="example_radio_1" value="true" checked>
+                        <label for="example_radio_2">Islamiyahh</label>
+                    </div>-->
+
+
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Vote</button>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</div>
+<!-- End for mobile -->
+
+<!--Other than mobile-->
+
+
+
+
+
+
+{% endblock %}

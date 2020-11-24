@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins';
+    background: linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);
+    background-repeat: no-repeat;
+    background-size: 400%;
+    overflow: scroll;
+    animation: bganimation 15s infinite;
+}
+
+.card-container {
+    background-color: #F7F7F7;
+    max-width: max-content;
+    padding: 30px 30px 30px;
+}
+
+.card {
+    margin: 40px auto;
+    padding: auto;
+    font-weight: 400;
+    /*overflow: hidden;*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    animation: Slide_up 1.4s ease
+}
+
+.mob-img {
+    animation: Slide_down 1.5s ease;
+}
+
+.mob-text {
+    animation: Slide_up 1.7s ease;
+}
+
+
+/* Radio Buttons Styles */
+
+.box {
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.box label {
+    display: flex;
+    height: 53px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 30px;
+    margin: 10px 0;
+    padding-left: 10px;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+#option-1:checked~.option-1,
+#option-2:checked~.option-2,
+#option-3:checked~.option-3,
+#option-4:checked~.option-4,
+#option-5:checked~.option-5,
+#option-6:checked~.option-6,
+#option-7:checked~.option-7,
+#option-8:checked~.option-8,
+#option-9:checked~.option-9,
+#option-10:checked~.option-10 {
+    background: #2980b9;
+    border-color: #2980b9;
+}
+
+.box label .dot {
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#option-1:checked~.option-1 .dot,
+#option-2:checked~.option-2 .dot,
+#option-3:checked~.option-3 .dot,
+#option-4:checked~.option-4 .dot,
+#option-5:checked~.option-5 .dot,
+#option-6:checked~.option-6 .dot,
+#option-7:checked~.option-7 .dot,
+#option-8:checked~.option-8 .dot,
+#option-9:checked~.option-9 .dot,
+#option-10:checked~.option-10 .dot {
+    background: #fff;
+}
+
+.box label .dot::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#option-1:checked~.option-1 .dot::before,
+#option-2:checked~.option-2 .dot::before,
+#option-3:checked~.option-3 .dot::before,
+#option-4:checked~.option-4 .dot::before,
+#option-5:checked~.option-5 .dot::before,
+#option-6:checked~.option-6 .dot::before,
+#option-7:checked~.option-7 .dot::before,
+#option-8:checked~.option-8 .dot::before,
+#option-9:checked~.option-9 .dot::before,
+#option-10:checked~.option-10 .dot::before {
+    background: #2980b9;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.box label .text {
+    color: #2980b9;
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 10px;
+    transition: color 0.3s ease;
+}
+
+#option-1:checked~.option-1 .text,
+#option-2:checked~.option-2 .text,
+#option-3:checked~.option-3 .text,
+#option-4:checked~.option-4 .text,
+#option-5:checked~.option-5 .text,
+#option-6:checked~.option-6 .text,
+#option-7:checked~.option-7 .text,
+#option-8:checked~.option-8 .text,
+#option-9:checked~.option-9 .text,
+#option-10:checked~.option-10 .text {
+    color: #fff;
+}
+
+.box input[type="radio"] {
+    display: none;
+}
+
+
+/* Radio Button styles end */
+
+
+/*
+ * Form styles
+ */
+
+.form-signin #inputMail {
+    width: 250px;
+    direction: ltr;
+    height: 44px;
+    font-size: 16px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-color: #85abdd;
+}
+
+.form-signin #inputMail:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.pseudolink {
+    text-decoration: dotted;
+    cursor: pointer;
+    font-size: small;
+}
+
+.pseudo {
+    animation: Slide_up 1.3s ease;
+}
+
+.copyright {
+    animation: Slide_up 2.5s ease;
+}
+
+
+/* Modals */
+
+#admin,
+#dev,
+#right {
+    color: white;
+}
+
+
+/* linear-gradient(125deg, #2c3e50, #27ae60, #2980b9, #e74c3c, #8e44ad);
+*/
+
+.btn {
+    width: 50%;
+    height: 44px;
+    margin: auto;
+    font-size: 1em;
+    border-radius: 30px;
+    border: 2px solid #44a9ad;
+    background-color: dodgerblue;
+    color: whitesmoke;
+}
+
+.btn:hover {
+    background-color: #e74c3c;
+    color: whitesmoke;
+}
+
+.bg-modal {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.scbg-modal {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    border-radius: 8px;
+    padding: auto;
+    /*padding: 20px;*/
+    position: relative;
+    overflow: scroll;
+}
+
+.scmodal-content {
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    border-radius: 8px;
+    padding: auto;
+    /*padding: 20px;*/
+    position: relative;
+    overflow: scroll;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    right: 14px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.sclose {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    right: 14px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    /*border: 2px solid #27ae60;*/
+}
+
+.logg {
+    max-width: max-content;
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #ccd0d4;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+}
+
+table td {
+    font-weight: 300;
+}
+
+@keyframes Slide_up {
+    0% {
+        transform: translateY(250px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Slide_down {
+    0% {
+        transform: translateY(-250px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bganimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
